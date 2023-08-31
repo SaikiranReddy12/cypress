@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-13T17:11:53.745Z",
+    "end": "2023-08-13T17:12:28.262Z",
+    "duration": 34517,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f2bca63d-de1b-4085-9f0f-52f20ad77c3c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\homePage.cy.js",
+      "file": "cypress\\e2e\\homePage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "df661c2b-794e-426c-9b7a-f5250c97979c",
+          "title": "Homepage test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify template price",
+              "fullTitle": "Homepage test suite Verify template price",
+              "timedOut": null,
+              "duration": 28479,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\homePage.cy.js\"\n}",
+              "code": "cy.get('.builderNowCta').click();\ncy.get('.topPart > .closeButton > .icon-cancel').click();\ncy.get('.filterTabs > ul > :nth-child(3)').click();\nvar templatePrice = \"0\";\nconst expectedPrice = \" ₹ 17,499\";\ncy.get(':nth-child(1) > .templateCard > .footer > .title > :nth-child(1) > .pricewithmonth > .pHeading').then(function ($element) {\n  templatePrice = $element.text();\n  assert.equal(templatePrice, expectedPrice);\n});\ncy.get(':nth-child(1) > .templateCard > .footer > .actionbx > .viewDetail').click();\ncy.wait(10000);\ncy.get(':nth-child(1) > label > .pricingRow > strong').contains(expectedPrice);",
+              "err": {},
+              "uuid": "55dcabe8-b646-4196-b3ca-b2573a4a3708",
+              "parentUUID": "df661c2b-794e-426c-9b7a-f5250c97979c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "55dcabe8-b646-4196-b3ca-b2573a4a3708"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28479,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
